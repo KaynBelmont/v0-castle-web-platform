@@ -2,19 +2,31 @@
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Castle, Users, BarChart3, Bell, Settings, ChevronLeft, ChevronRight, Crown, Shield } from "lucide-react"
+import {
+  Castle,
+  Users,
+  BarChart3,
+  Bell,
+  Settings,
+  ChevronLeft,
+  ChevronRight,
+  Crown,
+  Shield,
+  LogOut,
+} from "lucide-react"
 
 interface SidebarProps {
   activeSection: string
   onSectionChange: (section: string) => void
   collapsed: boolean
   onToggleCollapse: () => void
+  onLogout: () => void
 }
 
-export function Sidebar({ activeSection, onSectionChange, collapsed, onToggleCollapse }: SidebarProps) {
+export function Sidebar({ activeSection, onSectionChange, collapsed, onToggleCollapse, onLogout }: SidebarProps) {
   const menuItems = [
     { id: "dashboard", label: "Salão Principal", icon: Castle },
-    { id: "members", label: "Cavaleiros", icon: Users, badge: "30" },
+    { id: "members", label: "Cavaleiros", icon: Users, badge: "15" },
     { id: "analytics", label: "Relatórios", icon: BarChart3 },
     { id: "notifications", label: "Mensageiro", icon: Bell, badge: "3" },
     { id: "settings", label: "Configurações", icon: Settings },
@@ -22,7 +34,7 @@ export function Sidebar({ activeSection, onSectionChange, collapsed, onToggleCol
 
   return (
     <div
-      className={`fixed left-0 top-0 h-full bg-gradient-to-b from-slate-800 to-slate-900 border-r border-amber-600/20 transition-all duration-300 ${collapsed ? "w-16" : "w-64"} shadow-2xl`}
+      className={`fixed left-0 top-0 h-full bg-gradient-to-b from-slate-800 to-slate-900 border-r border-amber-600/20 transition-all duration-300 ${collapsed ? "w-16" : "w-64"} shadow-2xl z-50`}
     >
       {/* Header */}
       <div className="p-4 border-b border-amber-600/20">
@@ -85,7 +97,7 @@ export function Sidebar({ activeSection, onSectionChange, collapsed, onToggleCol
 
       {/* Footer */}
       {!collapsed && (
-        <div className="absolute bottom-4 left-4 right-4">
+        <div className="absolute bottom-4 left-4 right-4 space-y-2">
           <div className="bg-amber-600/10 border border-amber-600/20 rounded-lg p-3">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center">
@@ -97,6 +109,14 @@ export function Sidebar({ activeSection, onSectionChange, collapsed, onToggleCol
               </div>
             </div>
           </div>
+          <Button
+            onClick={onLogout}
+            variant="outline"
+            className="w-full border-red-600/30 text-red-300 hover:bg-red-600/10 hover:text-red-200 bg-transparent"
+          >
+            <LogOut className="h-4 w-4 mr-2" />
+            Sair do Reino
+          </Button>
         </div>
       )}
     </div>
