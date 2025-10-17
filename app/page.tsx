@@ -7,6 +7,7 @@ import { MembersSection } from "@/components/members-section"
 import { AnalyticsSection } from "@/components/analytics-section"
 import { NotificationsSection } from "@/components/notifications-section"
 import { SettingsSection } from "@/components/settings-section"
+import { InstagramPostSection } from "@/components/instagram-post-section"
 import { LoginForm } from "@/components/login-form"
 
 export default function CastleDashboard() {
@@ -14,7 +15,6 @@ export default function CastleDashboard() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
   const [isAuthenticated, setIsAuthenticated] = useState(false)
 
-  // Verificar se já está logado (localStorage)
   useEffect(() => {
     const auth = localStorage.getItem("castle_auth")
     if (auth === "true") {
@@ -23,7 +23,6 @@ export default function CastleDashboard() {
   }, [])
 
   const handleLogin = (email: string, password: string) => {
-    // Validação simples (em produção, use autenticação real)
     if (email === "admin@castle.com" && password === "castle123") {
       setIsAuthenticated(true)
       localStorage.setItem("castle_auth", "true")
@@ -47,6 +46,8 @@ export default function CastleDashboard() {
         return <AnalyticsSection />
       case "notifications":
         return <NotificationsSection />
+      case "instagram":
+        return <InstagramPostSection />
       case "settings":
         return <SettingsSection />
       default:

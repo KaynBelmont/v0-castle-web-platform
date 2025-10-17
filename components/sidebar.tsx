@@ -13,6 +13,7 @@ import {
   Crown,
   Shield,
   LogOut,
+  Instagram,
 } from "lucide-react"
 
 interface SidebarProps {
@@ -29,6 +30,7 @@ export function Sidebar({ activeSection, onSectionChange, collapsed, onToggleCol
     { id: "members", label: "Cavaleiros", icon: Users, badge: "15" },
     { id: "analytics", label: "Relatórios", icon: BarChart3 },
     { id: "notifications", label: "Mensageiro", icon: Bell, badge: "3" },
+    { id: "instagram", label: "Instagram", icon: Instagram },
     { id: "settings", label: "Configurações", icon: Settings },
   ]
 
@@ -79,7 +81,9 @@ export function Sidebar({ activeSection, onSectionChange, collapsed, onToggleCol
               } ${collapsed ? "px-2" : "px-3"}`}
               onClick={() => onSectionChange(item.id)}
             >
-              <Icon className={`h-5 w-5 ${collapsed ? "" : "mr-3"}`} />
+              <Icon
+                className={`h-5 w-5 ${collapsed ? "" : "mr-3"} ${item.id === "instagram" ? "text-pink-400" : ""}`}
+              />
               {!collapsed && (
                 <>
                   <span className="font-medium">{item.label}</span>
