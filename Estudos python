@@ -1,0 +1,910 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOHomP+9Z8sjatw9FEaHwf5",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/KaynBelmont/v0-castle-web-platform/blob/main/Estudos%20python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "name = input(\"Type your name:\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IlwFxIhTX9Hq",
+        "outputId": "0720a1b9-2223-4873-f0c8-1dae719fe393"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Type your name:Caiobora\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "name = input('Type your name: ')\n",
+        "print(name)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e_klZJAlxXJ2",
+        "outputId": "80859ed0-a8e9-4bbe-f1da-c5496ca1220d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Type your name: kayn\n",
+            "kayn\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "name = input('Type your name: ')\n",
+        "age = input('How old are you? ')\n",
+        "\n",
+        "print(name)\n",
+        "print(age)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-o8PvlCN176q",
+        "outputId": "db3f9f02-3711-4d9f-d1df-eb87ce60ac11"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Type your name: Kayn\n",
+            "How old are you? 26\n",
+            "Kayn\n",
+            "26\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "name = input('Type your name: ')\n",
+        "age = input('How old are you? ')\n",
+        "\n",
+        "print ('Hi', name, 'you are', age, 'years old!')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wJK6adoJ2iEd",
+        "outputId": "939bd703-bd1f-4392-f136-7ab70eb66ced"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Type your name: Caio\n",
+            "How old are you? 26\n",
+            "Hi Caio you are 26 years old!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#f-string\n",
+        "\n",
+        "name = input('Type your name: ')\n",
+        "age = input('How old are you? ')\n",
+        "\n",
+        "print(f'Hi {name}, you are {age} years old!')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6fqhHXom8SRh",
+        "outputId": "d5ae14a4-4dc5-45e7-e8bb-c16d90482ecf"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Type your name: Caio\n",
+            "How old are you? 26\n",
+            "Hi Caio, you are 26 years old!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#f-string\n",
+        "\n",
+        "name = input('Type your name: ')\n",
+        "age = input('How old are you? ')\n",
+        "favorite_color = input('What is your favorite color? ')\n",
+        "\n",
+        "print(f'Hi {name}, you are {age} years old. And yout favorite color is: {favorite_color}!')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yXvIG-4D8s9C",
+        "outputId": "7abaf64c-6b04-4cb5-b6ee-22d1cf4d8d23"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Type your name: Caio\n",
+            "How old are you? 26\n",
+            "What is your favorite color? black\n",
+            "Hi Caio, you are 26 years old. And yout favorite color is: black!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#f-tring cálculo\n",
+        "\n",
+        "name = input('Type your name: ')\n",
+        "age = int(input('How old are you? '))  #a variável por sua vez é uma string, colocar ela dentro do -> int(), converte o type de string para integer\n",
+        "\n",
+        "\n",
+        "print(f'Hi {name}, in 5 years you will be: {age + 5}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "16J2lVjC9nPr",
+        "outputId": "a34bd3ec-19a4-4c91-910c-994281d5e265"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Type your name: Caio\n",
+            "How old are you? 26\n",
+            "Hi Caio, in 5 years you will be: 31\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Números e operações\n",
+        "\n",
+        "num1 = 10\n",
+        "num2 = 5\n",
+        "\n",
+        "print(num1 + num2)\n",
+        "print(num1 - num2)\n",
+        "print(num1 * num2)\n",
+        "print(num1 / num2)\n",
+        "print(num1 // num2)   #divisão inteira\n",
+        "print(num1 % num2)    #resto de divisão (num usa muito)\n",
+        "print(num1 ** num2)   #potencia"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ymhvsxXLAbMR",
+        "outputId": "d304988c-57e4-4562-afbe-27c7fc92519f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "15\n",
+            "5\n",
+            "50\n",
+            "2.0\n",
+            "2\n",
+            "0\n",
+            "100000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Cálculo de desconto com %\n",
+        "\n",
+        "price = int(input('How much is it? '))    #valor na moeda\n",
+        "discount= int(input('Discount applied: '))  #disconto em %\n",
+        "\n",
+        "new_price = price - price * discount / 100\n",
+        "print(new_price)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "txRt_tVOFCzb",
+        "outputId": "34e8d5c2-ad5e-442f-f456-2379fa722146"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "How much is it? 2000\n",
+            "Discount applied: 15\n",
+            "1700.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#calcular quantos dias um produto duraria se a pessoa usar X porções por dia?\n",
+        "\n",
+        "total_serving = int(input('Total Servings: '))\n",
+        "serving_by_day = int(input('How many used? '))\n",
+        "\n",
+        "days = total_serving / serving_by_day\n",
+        "print(f'You have {days:.0f} last of servings!')   #esse comando do lado da variável -> :.0f é para definir quantas casas decimais vai aparecer"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bbzYYmRANMG-",
+        "outputId": "1ba9e6ca-173e-4387-b74c-9bf3d086e42a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Total Servings: 2000\n",
+            "How many used? 15\n",
+            "You have 133 last of servings!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Lógicas de TRUE ou FALSE\n",
+        "\n",
+        "num1 = 10\n",
+        "num2 = 10\n",
+        "\n",
+        "print(num1 == num2)\n",
+        "print(num1 != num2)\n",
+        "print(num1 > num2)\n",
+        "print(num1 < num2)\n",
+        "print(num1 >= num2)\n",
+        "print(num1 <= num2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DB5KxSvqPZep",
+        "outputId": "f9e74d50-4d30-458d-8603-709ee8f59901"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "False\n",
+            "False\n",
+            "False\n",
+            "True\n",
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user = input('Type your username: ')\n",
+        "password = input('Enter your password: ')\n",
+        "\n",
+        "approved = user == 'Kayn' and password == '115935'\n",
+        "\n",
+        "print(f'Access {approved}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lwsQwxSxvomz",
+        "outputId": "0e448bc6-afe8-40a5-f91e-84833eff5418"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Type your username: Kayn\n",
+            "Enter your password: 115935\n",
+            "Access True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#IF e ELSE\n",
+        "\n",
+        "num = int(input('Type a number: '))\n",
+        "\n",
+        "if num == 10:\n",
+        "  print('Correct!')\n",
+        "else:\n",
+        "  print('Incorrect')"
+      ],
+      "metadata": {
+        "id": "tFzBrtgRzXs_",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "65874c0c-7f34-453b-c793-63d7104ffb7a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Type a number: 10\n",
+            "Correct!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "age = int(input('How old are you? '))\n",
+        "\n",
+        "if age >= 18:\n",
+        "  print('Take care! From now on you can be arrested now xD')\n",
+        "else:\n",
+        "  print('Close enough...')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "s6me4ejcUZkA",
+        "outputId": "3f9b9586-c146-4782-91bc-171c56c60b9d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "How old are you? 19\n",
+            "Take care! From now on you can be arrested now xD\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#ELIF é quando voce coloca uma condição a mais de IF antes de fechar um ELSE\n",
+        "\n",
+        "grade = float(input('Type your exam grade: '))\n",
+        "\n",
+        "if grade >=7:\n",
+        "  print('Approved')\n",
+        "elif grade >=5:\n",
+        "  print('Recuperação')\n",
+        "else:\n",
+        "  print('Rejected')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "L62MWDKZVPXU",
+        "outputId": "3bfc2df7-4528-4c79-e10d-8a149f3b60b2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Type your exam grade: 6\n",
+            "Recuperação\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#FOR e WHILE                                   #FOR -> quando eu sei a quantidade de vezes que preciso repetir a tarefa\n",
+        "                                               #WHILE -> quando eu não sei a quantidade de vezes que preciso executar, vai depender de uma condição\n",
+        "for repeat in range(11, 0, -2):\n",
+        "  print(repeat)"
+      ],
+      "metadata": {
+        "id": "tpdh44moXJHH",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c262c951-3bb8-4d94-b6c3-2f0cf1ebb3c4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "11\n",
+            "9\n",
+            "7\n",
+            "5\n",
+            "3\n",
+            "1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "i = 0\n",
+        "while i <= 5:\n",
+        "    print(i)\n",
+        "    i += 1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KNLupwN8pejY",
+        "outputId": "3d0be71e-030b-4924-d5eb-8bb08fc20fad"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "password = ''\n",
+        "while password != '115':\n",
+        "  password = input('Type system password: ')\n",
+        "print ('Access granted!')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dp9FOoPjqQ4w",
+        "outputId": "530eaa31-e7c5-4023-971e-1720a5a38b92"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Type system password: 115\n",
+            "Access granted!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LIST, TUPLES e DICTIONARY\n",
+        "\n",
+        "fruits = ['Banana', 'Apple', 'Coconut']\n",
+        "\n",
+        "print(fruits[0]) #Baseado em index, ou seja sempre inicia em 0\n",
+        "fruits.append('Grape')\n",
+        "fruits.remove('Apple')\n",
+        "\n",
+        "print(len(fruits))\n",
+        "print(fruits)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "STTEbalHq-xR",
+        "outputId": "031369b6-d6da-413c-96bc-5f705e7f2d05"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Banana\n",
+            "3\n",
+            "['Banana', 'Coconut', 'Grape']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tasks = []                                                        #LIST -> um ou vários itens mutaveis\n",
+        "\n",
+        "tasks.append('Study')\n",
+        "tasks.append('Take a dump')\n",
+        "tasks.append('Play minecraft')\n",
+        "\n",
+        "print('Daily tasks: ')\n",
+        "for tasks in tasks:\n",
+        "  print(tasks)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CyE3Sj-Rtd6f",
+        "outputId": "58b2279d-3041-44ab-c52b-240c3170a769"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Daily tasks: \n",
+            "Study\n",
+            "Take a dump\n",
+            "Play minecraft\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "months = ('January', 'February', 'March')                          #TUPLES -> um ou vários itens imutaveis\n",
+        "\n",
+        "print(months)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TA_NoLqPuXtf",
+        "outputId": "f8e497b5-f837-48d4-9005-182cdee891ba"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "('January', 'February', 'March')\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user = {                                                          #DICTIONARY -> usuarios, endereços, produtos, configurações\n",
+        "    'name': 'Kayn',\n",
+        "    'age': 26,\n",
+        "    'department': 'IT',\n",
+        "}\n",
+        "\n",
+        "user['age'] = 27 #updatar uma info ja no dicionario\n",
+        "user['city'] = 'Santos' #adicionar um item no dicionario\n",
+        "\n",
+        "\n",
+        "print(user)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KaETQtKwwN-3",
+        "outputId": "19639b79-fc58-4218-d1d4-67df5ced28ca"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'name': 'Kayn', 'age': 27, 'department': 'IT', 'city': 'Santos'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "student = {\n",
+        "    'name': input('Type name: '),\n",
+        "    'age': input('Type student age: '),\n",
+        "    'grade': input('Type grade: '),\n",
+        "\n",
+        "}\n",
+        "\n",
+        "print(f\"{student['name']} has {student['age']} and got {student['grade']}!\" )"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dLOY6IOmzUre",
+        "outputId": "7f610de5-fe3d-4b51-9eef-66ee2d0c4ad1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Type name: Kayn\n",
+            "Type student age: 26\n",
+            "Type grade: 7.5\n",
+            "Kayn has 26 and got 7.5!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#FUNCTIONS -> São um bloco de construção, onde voce escreve uma vez, e utiliza várias vezes\n",
+        "\n",
+        "def greeting(name, age):\n",
+        "  print(f'Hello {name}, you have {age} years old!')\n",
+        "\n",
+        "greeting('Kayn', 26)\n"
+      ],
+      "metadata": {
+        "id": "lZx1_RgS05SG",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "302a7aed-1b13-4cf7-d985-af1db36a7a47"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello Kayn, you have 26 years old!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def sum(num1, num2):\n",
+        "  return num1 + num2\n",
+        "\n",
+        "total = sum(100, 15)\n",
+        "print(f'The result is: {total}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "f_Hoaluso3uu",
+        "outputId": "96ddf171-210d-44c8-b99d-264996970e90"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The result is: 115\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def discount_calc(price, discount):\n",
+        "  return price - price * discount / 100\n",
+        "\n",
+        "total = discount_calc(1010, 25)\n",
+        "print(f'Total price with discount: R${total:.2f}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LI3GW1EAqLVP",
+        "outputId": "1eecca67-28d8-496d-d761-5696c01bc299"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Total price with discount: R$757.50\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#POO\n",
+        "\n",
+        "#1 - Criar uma classe (um grupo de informações), sempre começa com a primeira letra MAIUSCULA\n",
+        "#2 - Criar um construtor, sempre comça com \"def\" e ele sempre terá no inicio o \"__init__\", depois passo as informações do construtor, a primeira é \"self\"\n",
+        "#3 - Criar os métodos\n",
+        "#4 - Criar as instancias da classe \"casa1\" e passa os atributos\n",
+        "5# - Executa os métodos \"casa.mostrar()\""
+      ],
+      "metadata": {
+        "id": "g5feOviRrN_L"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Casa:\n",
+        "    def __init__(self, cor, quartos, banheiros):\n",
+        "        self.cor = cor\n",
+        "        self.quartos = quartos\n",
+        "        self.banheiros = banheiros\n",
+        "\n",
+        "    def mostrar_cor(self):\n",
+        "        print(f'A cor da casa é: {self.cor}')\n",
+        "\n",
+        "    def mostrar_quartos(self):\n",
+        "        print(f'Esta casa tem: {self.quartos} quartos')\n",
+        "\n",
+        "    def mostrar_banheiros(self):\n",
+        "        print(f'Esta casa tem: {self.banheiros} banheiros')\n",
+        "\n",
+        "    def adicionar_quarto(self):\n",
+        "        self.quartos += 1\n",
+        "        print(f'Agora esta casa tem {self.quartos}')\n",
+        "\n",
+        "    def pintar_casa(self, nova_cor):\n",
+        "        print(f'Pintando a casa de {self.cor} para {nova_cor}')\n",
+        "\n",
+        "casa1 = Casa('Preta', 4, 2)\n",
+        "casa2 = Casa('Vermelha', 6, 3)\n",
+        "\n",
+        "print('\\nCasa 1: ')\n",
+        "casa1.mostrar_cor()\n",
+        "casa1.mostrar_quartos()\n",
+        "casa1.mostrar_banheiros()\n",
+        "casa1.adicionar_quarto()\n",
+        "casa1.pintar_casa('Ciano')\n",
+        "\n",
+        "print('\\nCasa 2: ')\n",
+        "casa2.mostrar_cor()\n",
+        "casa2.mostrar_quartos()\n",
+        "casa2.mostrar_banheiros()\n",
+        "casa2.adicionar_quarto()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cj5BcegZKND3",
+        "outputId": "4962a2d3-68db-4af4-f202-2f7d7ab31ae8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Casa 1: \n",
+            "A cor da casa é: Preta\n",
+            "Esta casa tem: 4 quartos\n",
+            "Esta casa tem: 2 banheiros\n",
+            "Agora esta casa tem 5\n",
+            "Pintando a casa de Preta para Ciano\n",
+            "\n",
+            "Casa 2: \n",
+            "A cor da casa é: Vermelha\n",
+            "Esta casa tem: 6 quartos\n",
+            "Esta casa tem: 3 banheiros\n",
+            "Agora esta casa tem 7\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
